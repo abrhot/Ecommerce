@@ -1,9 +1,7 @@
-function Footer() {
+export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 text-center p-4 mt-10">
+    <footer style={{ textAlign: "center", padding: "20px", marginTop: "50px", background: "#333", color: "white" }}>
       <p>© {new Date().getFullYear()} EcommerceApp. All rights reserved.</p>
     </footer>
   );
 }
-
-export default Footer;
