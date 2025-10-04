@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <footer className="p-4 bg-gray-900 text-white text-center">
-      © 2025 My E-commerce Store
+    <footer className="bg-gray-900 text-gray-300 text-center p-4 mt-10">
+      <p>© {new Date().getFullYear()} EcommerceApp. All rights reserved.</p>
     </footer>
   );
 }
