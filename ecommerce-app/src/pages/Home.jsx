@@ -1,11 +1,16 @@
-// Home.jsx (The Main Page Layout)
-import React from 'react';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import PromoBanners from './components/PromoBanners';
-import ProductCard from './components/ProductCard'; // We'll use this inside Home for simplicity here
+// src/pages/Home.jsx (or wherever your Home component lives)
 
-// Mock data to simulate fetching product information
+import React from 'react';
+// 💥 The Imports are now ABSOLUTE and look much cleaner!
+import Header from '@/components/Header.jsx';
+import HeroSection from '@/components/HeroSection.jsx';
+import PromoBanners from '@/components/PromoBanners.jsx';
+import ProductCard from '@/components/ProductCard.jsx'; 
+
+// NOTE: It is still best practice to include the file extension (.jsx or .js) 
+// if you are not using TypeScript or a tool like Next.js that hides it.
+
+// Mock data (replace with actual API fetch later)
 const bestSellers = [
   { id: 1, name: 'Instant camera', price: '100.00', imageUrl: '/path/to/camera.jpg', color: 'bg-pink-100' },
   { id: 2, name: 'Wireless mouse', price: '50.00', imageUrl: '/path/to/mouse.jpg', color: 'bg-blue-100' },
@@ -23,7 +28,7 @@ const Home = () => {
   return (
     <div style={backgroundStyle} className="text-white font-sans">
       
-      {/* 1. Header is typically a layout component, but we include it here */}
+      {/* 1. Header is now imported cleanly */}
       <Header />
 
       <main className="container mx-auto px-4 md:px-8 lg:px-12 pt-8">
@@ -60,7 +65,7 @@ const Home = () => {
 
       </main>
 
-      {/* 5. Footer component would go here */}
+      {/* Footer component would go here */}
     </div>
   );
 };
